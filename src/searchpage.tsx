@@ -195,17 +195,10 @@ export const AtomicPageWrapper: FunctionComponent<Props> = ({
               <AtomicFacet field="filetype" label="filetype" />
 
               {/* <AtomicFacet field="he_zoominpageversion" label="Version" /> */}
-              <AtomicFacet field="documenttype" label="DocumentType" />
+              <AtomicFacet field="he_mappingproductlist" label="Product List" />
+              <AtomicFacet field="he_zoominformat" label="Content Type" />
+              <AtomicFacet field="he_zoomindocumenttype" label="DocumentType" />
 
-              <AtomicTimeframeFacet withDatePicker label="Listed within">
-                <AtomicTimeframe unit="hour" />
-                <AtomicTimeframe unit="day" />
-                <AtomicTimeframe unit="week" />
-                <AtomicTimeframe unit="month" />
-                <AtomicTimeframe unit="quarter" />
-                <AtomicTimeframe unit="year" />
-                <AtomicTimeframe unit="year" amount={10} period="next" />
-              </AtomicTimeframeFacet>
             </AtomicFacetManager>
           </AtomicLayoutSection>
 
