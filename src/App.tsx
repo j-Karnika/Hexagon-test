@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import AtomicPageWrapper from "./searchpage.tsx";
-// import AtomicSearchBoxComponent from "./standalonesearchbox.tsx"; // Import the AtomicSearchBoxComponent
 import TokenFetcher from "./TokenFetcher.tsx"; // Import the TokenFetcher component
  
 function App() {
@@ -8,7 +7,6 @@ function App() {
  
   return (
     <>
-      {/* <AtomicSearchBoxComponent /> */}
  
       <div>
         <TokenFetcher onTokenFetched={setAccessToken} />{" "}
