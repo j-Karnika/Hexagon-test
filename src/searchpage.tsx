@@ -51,6 +51,7 @@ import {
   AtomicResultSectionBadges,
   AtomicResultPrintableUri,
   AtomicResultDate,
+  AtomicExternal,
 } from "@coveo/atomic-react";
 import {
   buildSearchEngine,
@@ -141,7 +142,9 @@ export const AtomicPageWrapper: FunctionComponent<Props> = ({
         }
   `}
       </style>
-
+      {/* <AtomicExternal>
+        <AtomicSearchBox></AtomicSearchBox>
+      </AtomicExternal> */}
       <AtomicSearchInterface
         engine={engine}
         fieldsToInclude={["he_zoominpageversion", "documenttype", "sourcetype"]}
@@ -168,18 +171,18 @@ export const AtomicPageWrapper: FunctionComponent<Props> = ({
                 <AtomicTab label="All Results" name="all" />
                 <AtomicTab
                   expression="@source==Zoomin_Publications_QA"
-                  label="Zoomin"
-                  name="Zoomin"
+                  label="Documentation"
+                  name="Documentation"
                 />
                 <AtomicTab
                   expression="@source==Sanity.io_QA"
-                  label="Sanity"
-                  name="Sanity"
+                  label="Community"
+                  name="Community"
                 />
                 <AtomicTab
                   expression="@source==Verint-Community-QA"
-                  label="Verint"
-                  name="Verint"
+                  label="Products"
+                  name="Products"
                 />
               </AtomicTabManager>
             </div>
@@ -191,7 +194,7 @@ export const AtomicPageWrapper: FunctionComponent<Props> = ({
               <AtomicFacet field="objecttype" label="Type" />
               <AtomicFacet field="filetype" label="filetype" />
 
-              <AtomicFacet field="he_zoominpageversion" label="Version" />
+              {/* <AtomicFacet field="he_zoominpageversion" label="Version" /> */}
               <AtomicFacet field="documenttype" label="DocumentType" />
 
               <AtomicTimeframeFacet withDatePicker label="Listed within">
